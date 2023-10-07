@@ -1,21 +1,57 @@
 .sidebar{
-    width: 15vw;
+    width: 18vw;
     background-color: white;
     height: 100vh;
-    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.logo-container{
+    text-align: center;
+    padding: 48px 36px 36px 36px;
+
+}
+.logo-container img{
+    width: 220px;
+    
 }
 
 .sidebar nav ul{
+    width: 100%;
     list-style-type: none;
+    padding: 0;
+    border-top: 1px solid #64CBFF;
+    padding-top: 36px;
 }
 
-.sidebar nav ul li{
-    height: 40px;
+.sidebar nav ul li, .logout{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-size: 18px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.4s ease-in;
+    border-left: 5px solid white;
+    padding-left: 30px;
 }
 
-.sidebar nav ul li a{
+.sidebar nav ul li:hover{
+    border-left: 5px solid #4631FF; 
+    background-color: rgba(163, 174, 208, 0.10);
+}
+
+.sidebar nav ul li a, .logout{
     text-decoration: none;
+    color: #A3AED0;
 }
-.sidebar img{
-    width: 220px;
+
+.sidebar nav ul li img, .logout img{
+    width: 20px;
+    margin-right: 12px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 0;
 }
