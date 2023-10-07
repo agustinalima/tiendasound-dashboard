@@ -25,7 +25,6 @@ function CardTotalProductos(){
             <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1696705188/dashboard/products_pqe8pp.png" alt=""></img>
             <p>Total productos</p>
             <h2>{total}</h2>
-
         </div>
 
     );
