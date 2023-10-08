@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Productos from './pages/Productos';
 import Categorias from './pages/Categorias';
+import AdminCard from './components/AdminCard';
 import {Route, Routes} from 'react-router-dom';
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className='body'>
       <Sidebar />
+      <AdminCard />
 
       <div className='main-content'>
       <Routes>

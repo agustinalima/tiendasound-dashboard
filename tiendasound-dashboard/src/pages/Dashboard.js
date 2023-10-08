@@ -11,7 +11,10 @@ function Dashboard(){
     return(
         <div>
 
+        <div className='page-title'>
+        <span className='tiendasound-tag'>Tienda Sound</span>
         <h1>Dashboard</h1>
+        </div>
         <CardTotalProductos />
         <CardTotalUsuarios />
         <CardTotalCategorias />
