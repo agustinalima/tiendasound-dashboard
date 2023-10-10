@@ -21,12 +21,18 @@ function CardTotalCategorias(){
 
 
     return(
-        <div className='cards'>
+        <div className='card'>
+          
+          <div className='icono'>
             <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1696705187/dashboard/categories_s0psvh.png" alt=""></img>
+          </div> 
+
+          <div className='data'>
             <p>Total categorías</p>
             <h2>{total}</h2>
-        </div>
+          </div> 
 
+        </div>
     );
 
 }

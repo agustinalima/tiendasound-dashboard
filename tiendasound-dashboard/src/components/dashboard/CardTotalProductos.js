@@ -21,12 +21,18 @@ function CardTotalProductos(){
 
 
     return(
-        <div className='cards'>
-            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1696705188/dashboard/products_pqe8pp.png" alt=""></img>
-            <p>Total productos</p>
-            <h2>{total}</h2>
-        </div>
+        <div className='card'>
 
+            <div className='icono'>
+              <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1696705188/dashboard/products_pqe8pp.png" alt=""></img>
+            </div>
+
+            <div className='data'>
+              <p>Total productos</p>
+              <h2>{total}</h2>
+            </div>
+
+        </div>
     );
 
 }

@@ -20,15 +20,23 @@ function CardUltimoUsuario() {
   }, []);
 
   return (
-    <div className='cards'>
-      <p>Último usuario agregado</p>
+    <div>
       {usuarioConMayorId ? (
-        <div>
-          <h3>Usuario con ID Mayor:</h3>
-          <img src={`https://res.cloudinary.com/dlf8flk1o/image/upload/v1693692976/avatars/${usuarioConMayorId.imagen}`} alt="" />
-          <p>{usuarioConMayorId.nombreCompleto}</p>
-          <p>{usuarioConMayorId.email}</p>
+
+        <div className='card'>
+
+          <div className='icono'>
+            <img className='foto' src={`https://res.cloudinary.com/dlf8flk1o/image/upload/v1693692976/avatars/${usuarioConMayorId.imagen}`} alt="" />
+          </div>
+
+          <div className='data'>
+            <p className='tit'>Último usuario agregado</p>
+            <h3>{usuarioConMayorId.nombreCompleto}</h3>
+            <p>{usuarioConMayorId.email}</p>
+          </div>
+
         </div>
+        
       ) : (
         <p>Cargando usuario...</p>
       )}

@@ -18,10 +18,9 @@ function CardChart() {
           fetch('https://tienda-sound.onrender.com/productos/api/categoria5'),
           fetch('https://tienda-sound.onrender.com/productos/api/categoria6')
         ]);
-
-       // Obtener solo el valor de "total" de cada respuesta y almacenarlo en el estado
-       const totals = await Promise.all(responses.map(response => response.json()))
-       .then(data => data.map(responseData => responseData.total));
+        
+        const data = await Promise.all(responses.map(response => response.json()));
+        const totals = data.map(responseData => responseData.total);
 
        setData(totals);
        setIsLoading(false);
@@ -38,21 +37,30 @@ function CardChart() {
   }
 
   return (
-    <div>
-      <h2>Cantidad de Productos por Categoría</h2>
-      <BarChart
-        width={600}
-        height={400}
-        data={data.map((total, index) => ({ name: `Categoria ${index + 1}`, total }))}
-        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="length" fill="#8884d8" barSize={30} />
-      </BarChart>
+
+    <div className='cardChart'>
+
+      <div className='dataChart'>
+        <p>Productos por</p>
+        <h2>Categoría</h2>
+      </div>
+
+      <div className='icono'>
+        <BarChart
+          width={600}
+          height={200}
+          data={data.map((Total, index) => ({ name: `${index + 1}`, Total }))}
+          margin={{right: 100}}
+        >
+          <CartesianGrid strokeDasharray="2 2" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="Total" fill="#4631FF" barSize={40} />
+        </BarChart>
+      </div>
+
     </div>
   );
 }

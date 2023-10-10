@@ -21,12 +21,18 @@ function CardTotalUsuarios(){
 
 
     return(
-        <div className='cards'>
+        <div className='card'>
+
+          <div className='icono'>
             <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1696705188/dashboard/users_uyowvc.png" alt=""></img>
+          </div>
+
+          <div className='data'>
             <p>Total usuarios</p>
             <h2>{total}</h2>
+          </div>
+          
         </div>
-
     );
 
 }

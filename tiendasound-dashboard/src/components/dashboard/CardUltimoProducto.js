@@ -20,20 +20,25 @@ function CardUltimoProducto() {
   }, []);
 
   return (
-    <div className='cards'>
-      <p>Último producto agregado</p>
+    <div>
       {productoConMayorId ? (
-        <div>
-          <img src={`https://res.cloudinary.com/dlf8flk1o/image/upload/v1696102067/productos/${productoConMayorId.imagen}`} alt="" />
-          <p>{productoConMayorId.estado}</p>
-          <p>{productoConMayorId.nombreProducto}</p>
-
-          {productoConMayorId.envio === 0 ? (
-          <p>Envío gratis</p>) :
-          (<p>Envio {productoConMayorId.envio}</p>
-        )}
-          <p>{productoConMayorId.precioProducto}</p>
+        <div className='cardUP'>
           
+            <div className='iconoUP'>
+             <img src={`https://res.cloudinary.com/dlf8flk1o/image/upload/v1696102067/productos/${productoConMayorId.imagen}`} alt="" />
+            </div>
+            
+            <div className='dataUP'>
+                <p>Último producto agregado</p>
+                <span>{productoConMayorId.estadoProducto}</span>
+                <h3>{productoConMayorId.nombreProducto}</h3>
+                {productoConMayorId.envio === 0 ? (
+                <p className='envioUP'>Envío gratis</p>) :
+                (<p className='envioUP'>Envio {productoConMayorId.envio}</p>
+              )}
+                <p className='precioUP'>$ {productoConMayorId.precioProducto}</p>
+            </div>
+            
         </div>
       ) : (
         <p>Cargando usuario...</p>
