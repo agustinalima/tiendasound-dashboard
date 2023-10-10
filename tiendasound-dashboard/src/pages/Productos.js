@@ -1,7 +1,4 @@
 import ListadoProductos from '../components/productos/ListadoProductos';
-import CardChart from '../components/productos/ListadoProductos';
-
-
 
 function Productos(){
     return(
@@ -14,10 +11,8 @@ function Productos(){
 
         <ListadoProductos />
 
-        
         </div>
     );
 }
-
 
 export default Productos;

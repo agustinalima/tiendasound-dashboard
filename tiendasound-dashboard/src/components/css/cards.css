@@ -5,7 +5,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    margin: 0px 30px;
+    margin: 0px 0px 0px 40px
 }
 .page-title h1 {
     color: #2B3674
@@ -20,7 +20,7 @@
     background-color: white;
     justify-content: center;
     align-items: center;
-    max-width: 230px;
+    max-width: 220px;
     height: 80px;
   } 
   .icono {
@@ -35,7 +35,7 @@
     border-radius: 100%;
   }
   .data {
-    flex: 2; /* Los datos ocuparán la mitad derecha del div */
+    flex: 3; /* Los datos ocuparán la mitad derecha del div */
     text-align: left; /* Alineación de texto a la derecha */
     padding: 0 20px;
   }
@@ -75,7 +75,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 515px;
+    width: 496px;
     height: 300px;
   }
   .dataChart {
@@ -101,7 +101,7 @@
     padding: 20px; 
     background-color: white;
     flex-direction: row;
-    width: 515px;
+    width: 496px;
     height: 300px;
   }
   .cardUP .ult {

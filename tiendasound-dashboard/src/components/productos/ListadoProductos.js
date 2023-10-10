@@ -1,3 +1,5 @@
+import '../css/productos.css'
+
 import React, { useEffect, useState } from 'react';
 
 function ListadoProductos() {
@@ -35,37 +37,36 @@ function ListadoProductos() {
       return categoriaEncontrada ? categoriaEncontrada.nombre : 'Categoría no encontrada';
     };
 
-  return (
-    <div>
-      <h2>Productos</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Envío</th>
-            <th>Estado</th>
-            <th>Categoría</th>
-            <th>Creado Por</th>
-          </tr>
-        </thead>
-        <tbody>
-          {productos.map((producto) => (
-            <tr key={producto.id}>
-              <td>{producto.id}</td>
-              <td>{producto.nombreProducto}</td>
-              <td>${producto.precioProducto}</td>
-              <td>{producto.envio ? 'Sí' : 'No'}</td>
-              <td>{producto.estadoProducto}</td>
-              <td>{obtenerCategoriaPorId(producto.categoria_id)}</td>
-              <td>{obtenerEmailPorId(producto.usuario_id)}</td>
+    return (
+      <div className="table-container"> {/* Aplica la clase de contenedor de la tabla */}
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Envío</th>
+              <th>Estado</th>
+              <th>Categoría</th>
+              <th>Creado Por</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+          </thead>
+          <tbody>
+            {productos.map((producto) => (
+              <tr key={producto.id}>
+                <td className="idP">{producto.id}</td>
+                <td className="idN">{producto.nombreProducto}</td>
+                <td>${producto.precioProducto}</td>
+                <td>{producto.envio ? 'Sí' : 'No'}</td>
+                <td>{producto.estadoProducto}</td>
+                <td>{obtenerCategoriaPorId(producto.categoria_id)}</td>
+                <td>{obtenerEmailPorId(producto.usuario_id)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
 }
 
 export default ListadoProductos;

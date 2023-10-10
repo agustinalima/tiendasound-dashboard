@@ -10,7 +10,9 @@ import {Route, Routes} from 'react-router-dom';
 function App() {
   return (
     <div className='body'>
-      <Sidebar />
+      <div>
+        <Sidebar />
+      </div>
       <AdminCard />
 
       <div className='main-content'>

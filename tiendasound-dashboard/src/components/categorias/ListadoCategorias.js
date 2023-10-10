@@ -1,3 +1,5 @@
+import '../css/categorias.css'
+
 import React, { useEffect, useState } from 'react';
 
 function ListadoCategorias() {
@@ -17,10 +19,9 @@ function ListadoCategorias() {
 }, []);
   
 
-  return (
-    <div>
-      <h2>Categorias</h2>
-      <table border="1">
+return (
+    <div className="table-container-categoria"> {/* Aplica la misma clase de contenedor de la tabla */}
+      <table>
         <thead>
           <tr>
             <th>ID</th>
@@ -30,14 +31,14 @@ function ListadoCategorias() {
         <tbody>
           {categorias.map((categoria) => (
             <tr key={categoria.id}>
-              <td>{categoria.id}</td>
-              <td>{categoria.nombre}</td>
+              <td className="idP">{categoria.id}</td>
+              <td className="idN">{categoria.nombre}</td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  );
+);
 }
 
 export default ListadoCategorias;

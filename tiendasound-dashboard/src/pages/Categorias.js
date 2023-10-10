@@ -1,7 +1,6 @@
 import ListadoCategorias from '../components/categorias/ListadoCategorias';
 
 
-
 function Categorias(){
     return(
         <div>
@@ -13,10 +12,8 @@ function Categorias(){
 
         <ListadoCategorias />
 
-        
         </div>
     );
 }
-
 
 export default Categorias;
