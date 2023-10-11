@@ -6,6 +6,10 @@ import CardTotalCategorias from '../components/dashboard/CardTotalCategorias';
 import CardUltimoUsuario from '../components/dashboard/CardUltimoUsuario';
 import CardUltimoProducto from '../components/dashboard/CardUltimoProducto';
 import CardChart from '../components/dashboard/CardChart';
+import CardTotalProductosNuevos from '../components/dashboard/CardTotalProductosNuevos';
+import CardTotalProductosUsados from '../components/dashboard/CardTotalProductosUsados';
+import CardTotalEnvioGratis from '../components/dashboard/CardTotalEnvioGratis';
+import CardTotalEnvioPago from '../components/dashboard/CardTotalEnvioPago';
 
 
 function Dashboard(){
@@ -23,6 +27,10 @@ function Dashboard(){
                 <CardUltimoUsuario />
                 <CardChart />
                 <CardUltimoProducto />
+                <CardTotalProductosNuevos />
+                <CardTotalProductosUsados />
+                <CardTotalEnvioGratis />
+                <CardTotalEnvioPago />
             </section>
         </div>
     );

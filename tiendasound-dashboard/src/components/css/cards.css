@@ -5,7 +5,8 @@
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  margin: 0px 0px 0px 40px
+  margin: 0px 0px 0px 40px;
+  max-width: 1200px;
 }
 .page-title h1 {
   color: #2B3674
@@ -21,12 +22,12 @@
   justify-content: center;
   align-items: center;
   max-width: 220px;
-  height: 80px;
+  height: 60px;
   transition: 400ms;
 } 
 .card:hover {
   scale: 105%;
-  border: 1px solid #E93882;
+  border: 1px solid #4631FF;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .icono {
@@ -87,7 +88,7 @@
 }
 .cardChart:hover {
   scale: 102%;
-  border: 1px solid #E93882;
+  border: 1px solid #4631FF;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .dataChart {
@@ -119,7 +120,7 @@
 }
 .cardUP:hover {
   scale: 102%;
-  border: 1px solid #E93882;
+  border: 1px solid #4631FF;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .cardUP .ult {
